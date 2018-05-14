@@ -36,5 +36,5 @@ addGlobalStyle('* { font-family: "Tempus Sans ITC", Arial,sans-serif !important;
 //addGlobalStyle('p { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
 //addGlobalStyle('div { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
 
-//Twitter uses a specific body style, just "body" does not seem to work on its own.
-//addGlobalStyle('body.ms-windows { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
+//Twitter uses a specific body style, just "body" or "body.*" does not seem to work on its own.
+//addGlobalStyle('body.ms-windows { font-family: "Tempus Sans ITC", Arial,sans-serif; }');
