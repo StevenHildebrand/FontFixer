@@ -16,7 +16,8 @@
 //Generally, if the font has all the glyphs from U-0021 to U-00FF, it should be 99% safe to use
 //
 //Additional style elements after the wildcard are for setting specific elements rather than globally as a starter.  Additional lines will be needed for more specific elements
-//such as "body.new-style.other-type.foo.bar" and so on.
+//such as "body.new-style.other-type.foo.bar" and so on.  the !important provides a definite override to the css from the website, but may also cause other unforessen issues
+//Remove this first if there are problems running the script.
 
 function addGlobalStyle(css) {
     var head, style;
@@ -33,7 +34,7 @@ addGlobalStyle('* { font-family: "Tempus Sans ITC", Arial,sans-serif !important;
 //addGlobalStyle('body { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
 //addGlobalStyle('h1, h2, h3, h4, h5, h6, h7 { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
 //addGlobalStyle('p { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
-//addGlobalStyle('div { font-family: "Tempus Sans ITC", Arial,sans-serif; }');
+//addGlobalStyle('div { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
 
 //Twitter uses a specific body style, just "body" does not seem to work on its own.
-//addGlobalStyle('body.ms-windows { font-family: "Tempus Sans ITC", Arial,sans-serif; }');
+//addGlobalStyle('body.ms-windows { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
