@@ -16,7 +16,7 @@
 //Generally, if the font has all the glyphs from U-0021 to U-00FF, it should be 99% safe to use
 //
 //Additional style elements after the wildcard are for setting specific elements rather than globally as a starter.  Additional lines will be needed for more specific elements
-//such as "body.new-style.other-type.foo.bar" and so on.  the !important provides a definite override to the css from the website, but may also cause other unforessen issues
+//such as "body.new-style.other-type.foo.bar" and so on.  The "!important" provides a definite override to the css from the website, but may also cause other unforessen issues
 //Remove this first if there are problems running the script.
 
 function addGlobalStyle(css) {
