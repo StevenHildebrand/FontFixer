@@ -1,0 +1,39 @@
+// ==UserScript==
+// @name        FontFixer
+// @namespace   Steven Hildebrand
+// @description Set webpage fonts
+// @include     *
+// @version     1.0
+// @copyright	2018, CC BY-SA Steven Hildebrand
+// @supportURL
+// @homepageURL
+// @icon
+// @oujs:author Steven Hildebrand
+// @grant       none
+// ==/UserScript==
+
+//This will allow changing the font on most websites more or less globally.  Make sure to use a font that has all the common glyphs with accents and graves.
+//Generally, if the font has all the glyphs from U-0021 to U-00FF, it should be 99% safe to use
+//
+//Additional style elements after the wildcard are for setting specific elements rather than globally as a starter.  Additional lines will be needed for more specific elements
+//such as "body.new-style.other-type.foo.bar" and so on.
+
+function addGlobalStyle(css) {
+    var head, style;
+    head = document.getElementsByTagName('head')[0];
+    if (!head) { return; }
+    style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = css;
+    head.appendChild(style);
+}
+//Global
+addGlobalStyle('* { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
+
+//addGlobalStyle('body { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
+//addGlobalStyle('h1, h2, h3, h4, h5, h6, h7 { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
+//addGlobalStyle('p { font-family: "Tempus Sans ITC", Arial,sans-serif !important; }');
+//addGlobalStyle('div { font-family: "Tempus Sans ITC", Arial,sans-serif; }');
+
+//Twitter
+addGlobalStyle('body.ms-windows { font-family: "Tempus Sans ITC", Arial,sans-serif; }');
